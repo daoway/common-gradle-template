@@ -1,4 +1,4 @@
-package my;
+package com.blogspot.ostas.apps.cloud;
 
 import org.junit.jupiter.api.Test;
 

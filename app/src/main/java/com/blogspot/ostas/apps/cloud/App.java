@@ -1,4 +1,4 @@
-package my;
+package com.blogspot.ostas.apps.cloud;
 
 import lombok.extern.slf4j.Slf4j;
 

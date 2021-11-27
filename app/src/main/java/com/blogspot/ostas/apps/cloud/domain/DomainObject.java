@@ -1,4 +1,4 @@
-package my.domain;
+package com.blogspot.ostas.apps.cloud.domain;
 
 import java.time.Instant;
 
