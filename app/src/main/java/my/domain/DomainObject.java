@@ -1,8 +1,8 @@
 package my.domain;
 
-import lombok.Data;
-
 import java.time.Instant;
+
+import lombok.Data;
 
 @Data
 public class DomainObject {
