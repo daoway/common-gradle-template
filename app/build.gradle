@@ -67,10 +67,9 @@ artifactory {
     publish {
         repository {
             repoKey = 'repo1'
-            username = "${artifactory_user}"
-            password = "${artifactory_password}"
+            username = System.getenv("ARTIFACTORY_USER")
+            password = System.getenv("ARTIFACTORY_PASSWORD")
             maven = true
-
         }
         defaults {
             publications('mavenJava')
@@ -152,6 +151,6 @@ sonarqube {
     properties {
         property "sonar.host.url", "http://localhost:9000"
         property "sonar.projectKey", "myproject1"
-        property 'sonar.login', "${sonarToken}"
+        property 'sonar.login', System.getenv("SONAR_TOKEN")
     }
 }
