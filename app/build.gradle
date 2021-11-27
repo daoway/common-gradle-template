@@ -63,7 +63,7 @@ tasks.named('test') {
 }
 
 artifactory {
-    contextUrl = "${ARTIFACTORY_CONTEXT_URL}"
+    contextUrl = System.getenv("ARTIFACTORY_CONTEXT_URL")
     publish {
         repository {
             repoKey = 'repo1'
