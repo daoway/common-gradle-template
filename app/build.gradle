@@ -9,7 +9,6 @@ buildscript {
         classpath("io.spring.javaformat:spring-javaformat-gradle-plugin:0.0.29")
         classpath("org.jfrog.buildinfo:build-info-extractor-gradle:4+")
         classpath('org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:3.3')
-        classpath "gradle.plugin.com.hierynomus.gradle.plugins:license-gradle-plugin:0.15.0"
     }
 }
 
@@ -18,15 +17,12 @@ plugins {
     id 'checkstyle'
     id 'pmd'
     id 'jacoco'
-    id "com.github.hierynomus.license" version "0.15.0"
 }
 apply plugin: 'io.spring.javaformat'
 apply plugin: 'checkstyle'
 apply plugin: 'maven-publish'
 apply plugin: 'com.jfrog.artifactory'
 apply plugin: 'org.sonarqube'
-apply plugin: 'com.github.hierynomus.license'
-
 
 group = "com.blogspot.ostas.apps.cloud"
 version = "0.0.0.1"
@@ -74,7 +70,7 @@ artifactory {
         defaults {
             publications('mavenJava')
             publishArtifacts = true
-            properties = ['qa.level': 'basic', 'dev.team' : 'core']
+            properties = ['qa.level': 'basic', 'dev.team': 'core']
             publishPom = true
         }
     }
