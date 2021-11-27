@@ -81,10 +81,9 @@ artifactory {
     resolve {
         repository {
             repoKey = 'default-maven-virtual'
-            username = "${artifactory_user}"
-            password = "${artifactory_password}"
+            username = System.getenv("ARTIFACTORY_USER")
+            password = System.getenv("ARTIFACTORY_PASSWORD")
             maven = true
-
         }
     }
 }
